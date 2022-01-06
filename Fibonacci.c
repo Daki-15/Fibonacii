@@ -11,6 +11,11 @@ int fibonacci_iter(int number){
     return n2;
 }
 
+int fibonacci_rec(int number){
+    if(number <= 1) return number;
+    return fibonacci_rec(number - 1) + fibonacci_rec(number - 2);
+}
+
 int main(){
     int number;
     
@@ -19,6 +24,7 @@ int main(){
 
     printf("The %d-th number is %d", number, fibonacci_iter(number));
 
+    printf("\nThe %d-th number from recursiv calcul is %d", number, fibonacci_rec(number));
 
     return 0;
 }
